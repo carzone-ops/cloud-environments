@@ -1,13 +1,13 @@
-CHART_REPO := https://chartmuseum.build.cd.jenkins-x.io
+CHART_REPO := https://chartmuseum.carzone.cn
 CHART := jenkins-x-platform
-CHART_VERSION := 0.0.1722
+CHART_VERSION := 0.0.1633
 OS := $(shell uname)
 HELM := $(shell command -v helm 2> /dev/null)
 WATCH := $(shell command -v watch --help 2> /dev/null)
 RELEASE := jenkins-x
 
 setup:
-	helm repo add jenkins-x $(CHART_REPO)
+	helm repo add carzone $(CHART_REPO)
 
 delete:
 	helm delete --purge $(RELEASE)
