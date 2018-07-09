@@ -8,6 +8,7 @@ RELEASE := jenkins-x
 
 setup:
 	helm repo add jenkins-x $(CHART_REPO)
+	helm update
 
 delete:
 	helm delete --purge $(RELEASE)
