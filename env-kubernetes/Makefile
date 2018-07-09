@@ -1,7 +1,7 @@
 include ../Makefile
 
 build: clean
-	helm repo add carzone $(CHART_REPO)
+	helm repo add jenkins-x $(CHART_REPO)
 	helm repo update
 
 install: clean build
