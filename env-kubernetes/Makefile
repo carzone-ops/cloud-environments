@@ -5,7 +5,7 @@ build: clean
 	helm repo update
 
 install: clean build
-	helm install carzone/$(CHART) --name $(RELEASE) -f ./myvalues.yaml -f ./secrets.yaml --version $(CHART_VERSION) $(ARGS)
+	helm install jenkins-x/$(CHART) --name $(RELEASE) -f ./myvalues.yaml -f ./secrets.yaml --version $(CHART_VERSION) $(ARGS)
 
 upgrade: clean build
-	helm upgrade $(RELEASE) carzone/$(CHART) -f myvalues.yaml -f secrets.yaml --version $(CHART_VERSION) $(ARGS)
+	helm upgrade $(RELEASE) jenkins-x/$(CHART) -f myvalues.yaml -f secrets.yaml --version $(CHART_VERSION) $(ARGS)
