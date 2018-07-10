@@ -2,6 +2,7 @@ include ../Makefile
 
 build: clean
 	helm repo add jenkins-x $(CHART_REPO)
+	echo test
 	helm repo update
 
 install: clean build
